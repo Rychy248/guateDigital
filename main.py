@@ -3,7 +3,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import time
-import pandas as pd
 
 
 def precioProducto(code):
@@ -14,7 +13,6 @@ def precioProducto(code):
     options.add_argument('--disable-extensions')
 
     driver_path = './chromedriver.exe'
-
     driver = webdriver.Chrome(driver_path, chrome_options=options)
 
     # Iniciarla en la pantalla 2
@@ -31,7 +29,11 @@ def precioProducto(code):
 
     driver.quit()
 
-    # "precioQuetzales":209,
+    # IMPRIMIENDO EN PANTALL
+    print("*"*25)
+    print("PRODUCTO:")
     print("El precio es: ",price,"")
 
 precioProducto(5041295)
+
+
